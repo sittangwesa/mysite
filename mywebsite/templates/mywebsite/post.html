@@ -1,0 +1,22 @@
+{%extends 'mywebsite/main.html'%}
+{% load static %}
+{%block content%}
+
+<style type="text/css">
+    img{
+        max-width: 100;
+        object-fit: cover;
+    }
+
+</style>
+<div class="main-container">
+ <h1>Post title</h1>
+<img src="{{post.thumbnail.url}}">
+
+<h1>{{post.headline}}</h1>
+<h4>{{post.sub_headline}}</h4>
+<p> {{post.body|safe}}</p>
+
+</div>
+
+{%endblock content%}
